@@ -14,7 +14,7 @@ AWS_PROFILE = "default"
 AWS_REGION = "us-east-2"
 
 # Must separate these by spaces and indicate directories with trailing /
-BLACK_FILEPATH_STR = f"{APP}/ tests/"
+BLACK_FILEPATH_STR = f"{APP}/ tests/ lambda/"
 
 
 @task
@@ -57,7 +57,9 @@ def check_formatting(c):
 
 
 @task(optional=["stack"])
-def deploy(c, profile=AWS_PROFILE, region=AWS_REGION, force=False, app=APP, stack=None):
+def deploy(
+    c, profile=AWS_PROFILE, region=AWS_REGION, force=False, app=APP, stack=None
+):
     """Deploy CDK CloudFormation stack(s)."""
 
     if stack:
@@ -84,7 +86,9 @@ def destroy(
 ):
     """Tear-down CDK CloudFormation stack(s)."""
 
-    responder = Responder(pattern="Are you sure you want to delete.*", response="y\n")
+    responder = Responder(
+        pattern="Are you sure you want to delete.*", response="y\n"
+    )
 
     if stack:
         c.run(

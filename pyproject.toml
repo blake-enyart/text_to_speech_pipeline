@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "text_to_speech_pipeline"
+version = "0.1.0"
+description = "AWS CDK app for converting text-to-speech in AWS"
+authors = ["Blake Enyart <blake.enyart@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+"aws-solutions-constructs.aws-s3-lambda" = "^1.84.0"
+"aws-cdk.aws-lambda" = "1.84.0"
+"aws-cdk.aws-s3" = "1.84.0"
+"aws-cdk.aws-lambda-event-sources" = "1.84.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+black = {version = "^20.8b1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 80
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  # The following are specific to Black, you probably don't want those.
+  | blib2to3
+  | tests/data
+  | profiling
+)/
+'''
