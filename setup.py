@@ -15,8 +15,8 @@ setuptools.setup(
     package_dir={"": "text_to_speech_pipeline"},
     packages=setuptools.find_packages(where="text_to_speech_pipeline"),
     install_requires=[
-        "aws-cdk.core==1.87.0",
-        "aws-cdk.aws_s3==1.87.0",
+        "aws-cdk.core==1.84.0",
+        "aws-cdk.aws_s3==1.84.0",
     ],
     python_requires=">=3.6",
     classifiers=[
