@@ -2,5 +2,6 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.formatting.provider": "black",
-    "python.pythonPath": "/Users/blackenyart/gh_projects/text_to_speech_pipeline/.venv/bin/python3"
+    "python.pythonPath": ".venv/bin/python3",
+    // "python.pythonPath": ".venv/bin/python3"
 }

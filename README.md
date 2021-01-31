@@ -35,6 +35,7 @@ Once the virtualenv is activated, you can install the required dependencies.
 
 ```
 $ pip install -r requirements.txt
+$ poetry install
 ```
 
 At this point you can now synthesize the CloudFormation template for this code.
@@ -56,10 +57,10 @@ command.
 
 ## Useful commands
 
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
+ * `inv ls`          list all stacks in the app
+ * `inv synth`       emits the synthesized CloudFormation template
+ * `inv deploy`      deploy this stack to your default AWS account/region
+ * `inv diff`        compare deployed stack with current state
  * `cdk docs`        open CDK documentation
 
 Enjoy!
