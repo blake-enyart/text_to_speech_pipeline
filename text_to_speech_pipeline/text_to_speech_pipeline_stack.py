@@ -26,12 +26,12 @@ class TextToSpeechPipelineStack(core.Stack):
             self,
             "test-s3-lambda",
             lambda_function_props=_lambda.FunctionProps(
-                code=_lambda.Code.asset("lambda"),
+                code=_lambda.Code.asset("lambdas"),
                 runtime=_lambda.Runtime.PYTHON_3_8,
                 handler="main.handler",
             ),
             existing_bucket_obj=s3_bucket,
             s3_event_source_props=lambda_es.S3EventSourceProps(
-                events=s3.EventType.OBJECT_CREATED,
+                events=[s3.EventType.OBJECT_CREATED],
             ),
         )
