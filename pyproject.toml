@@ -10,6 +10,7 @@ python = "^3.8"
 "aws-cdk.aws-lambda" = "1.84.0"
 "aws-cdk.aws-s3" = "1.84.0"
 "aws-cdk.aws-lambda-event-sources" = "1.84.0"
+"aws-cdk.aws-iam" = "1.84.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
@@ -17,6 +18,8 @@ black = {version = "^20.8b1", allow-prereleases = true}
 pylint = "^2.6.0"
 moto = {extras = ["polly"], version = "^1.3.16"}
 py-event-mocks = "^0.0.4"
+poetry = "^1.1.4"
+klaxon = "^1.1.1"
 
 [build-system]
 requires = ["setuptools", "poetry_core>=1.0"]

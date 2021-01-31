@@ -11,7 +11,7 @@ from klaxon import klaxon
 
 APP = "text_to_speech_pipeline"
 AWS_PROFILE = "default"
-AWS_REGION = "us-east-2"
+AWS_REGION = "us-east-1"
 
 # Must separate these by spaces and indicate directories with trailing /
 BLACK_FILEPATH_STR = f"{APP}/ tests/ lambdas/"
