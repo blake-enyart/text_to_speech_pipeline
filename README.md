@@ -3,6 +3,14 @@
 
 You should explore the contents of this project. It demonstrates a CDK app with an instance of a stack (`text_to_speech_pipeline_stack`)
 which contains an Amazon S3 bucket that triggers an AWS Lambda to send `.txt` style content to AWS Polly for conversion to `.mp3` that is landed in another S3 bucket.
+## What is the CDK?
+I find that a picture is worth a thousand words, but I look at the CDK as an abstraction on top of CloudFormation/Terraform that allows developers to rapidly build out solutions.
+
+If you would like to learn more about it [here][CDK] is a great link covering this topic.
+
+<p align="center">
+    <img src=static/images/CDK_concept.jpeg alt="CDK Conceptual Image">
+</p>
 
 ## Reference Architecture
 <p align="center">
@@ -90,3 +98,4 @@ Enjoy!
 [aws-console]: https://us-east-1.signin.aws.amazon.com/oauth?SignatureVersion=4&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJMOATPLHVSJ563XQ&X-Amz-Date=2021-01-12T00%3A05%3A11.345Z&X-Amz-Signature=1920433fc369ab91254fbb511f7c8f527c4b81071306397f7297641622807f3c&X-Amz-SignedHeaders=host&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&code_challenge=-0knKPwL3IU1WyWO1DiPbxS7WuUBHhIxFRcmYoOciNI&code_challenge_method=SHA-256&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fstate%3DhashArgs%2523%26isauthcode%3Dtrue&response_type=code&state=hashArgs%23
 [s3-input-bucket]: https://s3.console.aws.amazon.com/s3/buckets/text-to-speech-pipeline-s3inputbucket5b674094-1j7kl0t3tprdz
 [s3-output-bucket]: https://s3.console.aws.amazon.com/s3/buckets/tangle-audio-output
+[CDK]: https://aws.amazon.com/blogs/devops/rapid-flexible-infrastructure-with-solutions-constructs-cdk/
