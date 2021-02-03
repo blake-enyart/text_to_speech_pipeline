@@ -18,11 +18,9 @@ If you would like to learn more about it [here][CDK] is a great link covering th
 </p>
 
 ## Instructions for Usage
-* To upload content, you must be logged into AWS through the console which can be done [here][aws-console]
+* When you are logged in, you can upload a alphanumeric `.txt` file to the S3 bucket named [text-to-speech-pipeline-s3inputbucket5b674094-1j7kl0t3tprdz][s3-input-bucket] using the orange `Upload` button.
 
-* Once logged in, you can access the S3 bucket for uploading `.txt` files from [here][s3-input-bucket] and `Upload` the file.
-
-* After the `.txt` file has been uploaded, the Lambda function will automagically pickup the file and upload it to AWS Polly which will then output the `.mp3` file to another S3 bucket seen [here][s3-output-bucket].
+* After the `.txt` file has been uploaded, the Lambda function will automagically pickup the file and send it to AWS Polly which will then output the `.mp3` file to the S3 bucket [tangle-audio-output][s3-output-bucket].
 
 ## Project Overview
 
